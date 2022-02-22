@@ -10,4 +10,4 @@ data class Person(
     val age: Int?,
     val email: String?,
     val city:String?
-) :Parcelable 
+) :Parcelable
