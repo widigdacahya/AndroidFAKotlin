@@ -3,29 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    android:orientation="vertical"
+    tools:context=".DetailCategoryFragment">
 
 
     <TextView
+        android:id="@+id/tv_category_nameUI"
+        android:layout_marginBottom="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text = "Hi! This is Home Fragment 🏠" />
+        android:text="Category Name" />
 
-    <Button
-        android:id="@+id/btn_to_category"
-        android:text="Move to Category Fragment"
-        android:layout_marginBottom="4dp"
+    <TextView
+        android:id="@+id/tv_category_descUI"
+        android:layout_marginBottom="8dp"
+        android:text="Category Description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btn_to_other_category"
-        android:text="Other Category Friends"
+        android:id="@+id/btn_to_profileUI"
+        android:text="Go to Profile Activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_show_dialogueUI"
+        android:text="Show a Dialogue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

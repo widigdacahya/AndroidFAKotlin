@@ -76,6 +76,10 @@ class HomeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         val btnToCategory: Button = view.findViewById(R.id.btn_to_category)
         btnToCategory.setOnClickListener(this)
+
+        val btnToOtherCategory: Button = view.findViewById(R.id.btn_to_other_category)
+        btnToOtherCategory.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View) {
@@ -88,5 +92,16 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 commit()
             }
         }
+
+        if (v.id == R.id.btn_to_other_category) {
+            val mOtherCategoryFragment = CategoryOtherFragment()
+            val mFragmentManagerForOtherCategory = parentFragmentManager
+            mFragmentManagerForOtherCategory.beginTransaction().apply {
+                replace(R.id.frame_containerUI,mOtherCategoryFragment,CategoryOtherFragment::class.java.simpleName)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
     }
 }
