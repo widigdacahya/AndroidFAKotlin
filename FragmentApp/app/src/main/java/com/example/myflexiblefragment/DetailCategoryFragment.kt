@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [DetailCategoryFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DetailCategoryFragment : Fragment() {
+class DetailCategoryFragment : Fragment(), View.OnClickListener {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -72,6 +73,22 @@ class DetailCategoryFragment : Fragment() {
             tvCategoryDescription.text = description
         }
 
+
+        btnShowDialogue.setOnClickListener {
+
+            val mOptionDialogFragment = OptionDialogFragment()
+
+            val mFragmentManager = childFragmentManager
+            mOptionDialogFragment.show(mFragmentManager, OptionDialogFragment::class.java.simpleName)
+
+        }
+
+    }
+
+    internal var optionDialogListener: OptionDialogFragment.OnOptionDialogListener = object :OptionDialogFragment.OnOptionDialogListener{
+        override fun onOptionChoosen(text: String?) {
+            Toast.makeText(requireActivity(), text, Toast.LENGTH_SHORT).show()
+        }
     }
 
 
@@ -100,5 +117,9 @@ class DetailCategoryFragment : Fragment() {
         var EXTRA_NAME = "extra_name"
         var EXTRA_DESCRIPTION = "extra_description"
 
+    }
+
+    override fun onClick(v: View?) {
+        TODO("Not yet implemented")
     }
 }
