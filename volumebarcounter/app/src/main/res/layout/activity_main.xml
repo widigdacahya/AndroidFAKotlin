@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvLengthUI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etLengthUI"
+            app:layout_constraintTop_toBottomOf="@id/tvLengthUI"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Box Length"
+            android:hint="Input Box Length"
+            android:inputType="numberDecimal"
+            android:lines="1"/>
+
+
+        <TextView
+            android:id="@+id/tvWidthUI"
+            android:text="Width"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etLengthUI"
+            android:layout_marginTop="6sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etWidthUI"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/tvWidthUI"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Input Box Width"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/tvHeightUI"
+            android:text="Height"
+            android:textStyle="bold"
+            android:layout_marginTop="6sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etWidthUI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etHeightUI"
+            app:layout_constraintTop_toBottomOf="@id/tvHeightUI"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:hint="Input Box Height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/btnCalculateVolumeUI"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etHeightUI"
+            android:layout_marginTop="12sp"
+            android:text="CALCULATE 📏"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/tvResultUI"
+            app:layout_constraintTop_toBottomOf="@id/btnCalculateVolumeUI"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Result Here"
+            android:textSize="48sp"
+            android:layout_marginTop="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

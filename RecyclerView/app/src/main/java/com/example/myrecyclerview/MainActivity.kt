@@ -36,13 +36,19 @@ class MainActivity : AppCompatActivity() {
         get() {
             val dataName = resources.getStringArray(R.array.data_name)
             val dataDescription = resources.getStringArray(R.array.data_description)
-            val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+            //val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+
+            //[data photo with glide]
+            val dataPhoto = resources.getStringArray(R.array.data_photo)
 
             val listOfHero = ArrayList<Hero>()
 
             for(i in dataName.indices) {
-                val hero = Hero(dataName[i], dataDescription[i], dataPhoto.getResourceId(i,-1))
-                listOfHero.add(hero)
+                //val hero = Hero(dataName[i], dataDescription[i], dataPhoto.getResourceId(i,-1))
+
+                //[data photo with glide]
+                    val hero = Hero(dataName[i], dataDescription[i], dataPhoto[i])
+                    listOfHero.add(hero)
             }
 
         return listOfHero

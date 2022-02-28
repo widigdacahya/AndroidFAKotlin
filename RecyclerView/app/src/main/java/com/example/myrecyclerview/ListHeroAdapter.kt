@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adapter<ListHeroAdapter.ListViewHolder>() {
 
@@ -23,7 +24,15 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (heroName,heroDesc,heroPhoto) = listHero[position]
-        holder.imgHeroPhoto.setImageResource(heroPhoto)
+
+        //holder.imgHeroPhoto.setImageResource(heroPhoto)
+
+        //[data photo with glide]
+        Glide.with(holder.itemView.context)
+            .load(heroPhoto) //url gambar
+            .circleCrop()   //img jadi lingkaran
+            .into(holder.imgHeroPhoto)  //imageView tempat implementasi
+
         holder.tvHeroDesc.text = heroDesc
         holder.tvHeroName.text = heroName
 
