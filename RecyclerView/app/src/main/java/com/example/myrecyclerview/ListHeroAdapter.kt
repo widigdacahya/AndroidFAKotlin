@@ -32,11 +32,31 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
         * when an item clicked
         * we can do something here
         * */
-        holder.itemView.setOnClickListener{
-            Toast.makeText(holder.itemView.context, "\uD83D\uDC4B You click on " + listHero[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()
-        }
+        //holder.itemView.setOnClickListener{
+        //    Toast.makeText(holder.itemView.context, "\uD83D\uDC4B You click on " + listHero[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()
+        //}
+        //[the click listener then will be try to implemented from MainActivty]
+        holder.itemView.setOnClickListener {onItemClickCallback.onItemClicked(listHero[holder.adapterPosition])}
 
     }
 
     override fun getItemCount(): Int = listHero.size
+
+
+
+    /*
+    * TO MAKE ITEM CLICK LISTENER TRIGERRED
+    * FROM MAIN ACTIVITY
+    * CODE BELOW
+    * */
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Hero)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
 }

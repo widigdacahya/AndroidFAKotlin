@@ -2,6 +2,7 @@ package com.example.myrecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -50,6 +51,19 @@ class MainActivity : AppCompatActivity() {
         rvHeroes.layoutManager = LinearLayoutManager(this)
         val listHeroAdapter = ListHeroAdapter(heroesList)
         rvHeroes.adapter = listHeroAdapter
+
+
+        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Hero) {
+                showSelectedHereo(data)
+            }
+        })
+
+    }
+
+
+    private fun showSelectedHereo(hero: Hero) {
+        Toast.makeText(this, "\uD83D\uDC4B\uD83D\uDE4C You clicked ${hero.name}", Toast.LENGTH_SHORT).show()
     }
 
 }
