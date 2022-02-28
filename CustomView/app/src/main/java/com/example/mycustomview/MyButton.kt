@@ -42,6 +42,8 @@ class MyButton : AppCompatButton {
 
         setTextColor(txtColor)
         textSize = 12f
+
+        //make object in button to the center
         gravity = Gravity.CENTER
         text = when {
             isEnabled -> "Send ✈"
