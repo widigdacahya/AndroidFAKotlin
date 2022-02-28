@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adapter<ListHeroAdapter.ListViewHolder>() {
@@ -25,6 +26,16 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
         holder.imgHeroPhoto.setImageResource(heroPhoto)
         holder.tvHeroDesc.text = heroDesc
         holder.tvHeroName.text = heroName
+
+
+        /*
+        * when an item clicked
+        * we can do something here
+        * */
+        holder.itemView.setOnClickListener{
+            Toast.makeText(holder.itemView.context, "\uD83D\uDC4B You click on " + listHero[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     override fun getItemCount(): Int = listHero.size
