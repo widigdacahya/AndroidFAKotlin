@@ -8,18 +8,22 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.myrecyclerview.databinding.ItemRowHeroBinding
 
 class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adapter<ListHeroAdapter.ListViewHolder>() {
 
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgHeroPhoto : ImageView = itemView.findViewById(R.id.img_item_hero_photo_UI)
-        var tvHeroName : TextView = itemView.findViewById(R.id.tv_item_hero_name_UI)
-        var tvHeroDesc : TextView = itemView.findViewById(R.id.tv_item_hero_desc_UI)
+    class ListViewHolder(var binding: ItemRowHeroBinding) : RecyclerView.ViewHolder(binding.root) {
+        //[2. after got error on eturn onCreateViewHolder, delete below, change formal parameter]
+        //var imgHeroPhoto : ImageView = itemView.findViewById(R.id.img_item_hero_photo_UI)
+        //var tvHeroName : TextView = itemView.findViewById(R.id.tv_item_hero_name_UI)
+        //var tvHeroDesc : TextView = itemView.findViewById(R.id.tv_item_hero_desc_UI)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_hero, parent,false)
-        return ListViewHolder(view)
+        //[1. change to use view binnding]
+        //val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_hero, parent,false)
+        val binding = ItemRowHeroBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
@@ -31,10 +35,10 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
         Glide.with(holder.itemView.context)
             .load(heroPhoto) //url gambar
             .circleCrop()   //img jadi lingkaran
-            .into(holder.imgHeroPhoto)  //imageView tempat implementasi
+            .into(holder.binding.imgItemHeroPhotoUI)  //imageView tempat implementasi
 
-        holder.tvHeroDesc.text = heroDesc
-        holder.tvHeroName.text = heroName
+        holder.binding.tvItemHeroDescUI.text = heroDesc
+        holder.binding.tvItemHeroNameUI.text = heroName
 
 
         /*
