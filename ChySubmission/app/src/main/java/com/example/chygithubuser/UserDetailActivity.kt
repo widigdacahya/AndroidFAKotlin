@@ -6,10 +6,6 @@ import com.example.chygithubuser.databinding.ActivityUserDetailBinding
 
 class UserDetailActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_DATA = "EXTRA_DATA"
-    }
-
     private lateinit var detailBinding: ActivityUserDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,16 +15,22 @@ class UserDetailActivity : AppCompatActivity() {
         setContentView(detailBinding.root)
 
         val dataSent = intent.getParcelableExtra<GithubUser>(EXTRA_DATA) as GithubUser
-        detailBinding.ivPhotoDetailUI.setImageResource(dataSent.githubUserAvatar)
-        detailBinding.tvNameDetailUI.text = dataSent.githubUserName
-        detailBinding.tvUsernameDetailUI.text = dataSent.githubUserUsername
-        detailBinding.tvCompanyDetailUI.text = dataSent.githubUserCompany
-        detailBinding.tvRepoDataDetailUI.text = dataSent.githubUserRepo
-        detailBinding.tvLocationDataDetailUI.text = dataSent.githubUserLocation
-        detailBinding.tvFollowerDataDetailUI.text = dataSent.githubUserFollowers
-        detailBinding.tvFollowingDataDetailUI.text = dataSent.githubUserFollowing
+        detailBinding.apply {
+            ivPhotoDetailUI.setImageResource(dataSent.githubUserAvatar)
+            tvNameDetailUI.text = dataSent.githubUserName
+            tvUsernameDetailUI.text = dataSent.githubUserUsername
+            tvCompanyDetailUI.text = dataSent.githubUserCompany
+            tvRepoDataDetailUI.text = dataSent.githubUserRepo
+            tvLocationDataDetailUI.text = dataSent.githubUserLocation
+            tvFollowerDataDetailUI.text = dataSent.githubUserFollowers
+            tvFollowingDataDetailUI.text = dataSent.githubUserFollowing
+        }
 
         supportActionBar?.title = dataSent.githubUserName
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    companion object {
+        const val EXTRA_DATA = "EXTRA_DATA"
     }
 }

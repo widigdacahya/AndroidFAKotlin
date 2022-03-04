@@ -37,12 +37,14 @@ class MainActivity : AppCompatActivity() {
             val userFollower = resources.getStringArray(R.array.followers)
             val userFollowing = resources.getStringArray(R.array.following)
             val userAvatar = resources.obtainTypedArray(R.array.avatar)
+            //userAvatar.recycle() //<- if i put it here, the app suddenly close
 
             val listToReturn = ArrayList<GithubUser>()
             for(i in userName.indices) {
                 val aUserData = GithubUser(userUsername[i],userName[i],userLocation[i],userRepo[i],userCompany[i],userFollower[i],userFollowing[i],userAvatar.getResourceId(i,-1))
                 listToReturn.add(aUserData)
             }
+            userAvatar.recycle()
             return listToReturn
         }
 
@@ -57,19 +59,8 @@ class MainActivity : AppCompatActivity() {
             override fun onItemClicked(userData: GithubUser) {
                 anItemClicked(userData)
 
-                val userDataIntent = GithubUser(
-                    userData.githubUserUsername,
-                    userData.githubUserName,
-                    userData.githubUserLocation,
-                    userData.githubUserRepo,
-                    userData.githubUserCompany,
-                    userData.githubUserFollowers,
-                    userData.githubUserFollowing,
-                    userData.githubUserAvatar
-                )
-
                 val intentToDetail =Intent(this@MainActivity,UserDetailActivity::class.java)
-                intentToDetail.putExtra("EXTRA_DATA", userDataIntent)
+                intentToDetail.putExtra("EXTRA_DATA", userData)
                 startActivity(intentToDetail)
 
             }

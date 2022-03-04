@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toTopOf="@id/gl_half_horizontal_UI"
         android:layout_marginBottom="8dp"
         android:layout_width="120dp"
-        android:layout_height="120dp"/>
+        android:layout_height="120dp"
+        android:contentDescription="@string/icon_github" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_half_horizontal_UI"

@@ -1,0 +1,8 @@
+SPlashActivity
+https://developer.android.com/guide/topics/ui/splash-screen
+
+companion object
+https://kotlinlang.org/docs/reference/coding-conventions.html#class-layout
+
+sumber lain nemu di discussion
+https://github.com/oexlye08?tab=repositories

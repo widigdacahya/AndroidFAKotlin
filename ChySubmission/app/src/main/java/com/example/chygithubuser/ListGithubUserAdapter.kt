@@ -1,7 +1,5 @@
 package com.example.chygithubuser
 
-import android.graphics.drawable.Drawable
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -30,7 +28,7 @@ class ListGithubUserAdapter(private val listOfGithubUser: ArrayList<GithubUser>)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (userUsername, userName, userLocation, userRepo, userCompany, userFollower, userFollowing, userAvatar) = listOfGithubUser[position]
+        val (userUsername, userName, _, userRepo, userCompany, _, _, userAvatar) = listOfGithubUser[position]
         holder.bindingListItem.tvUserGithubNameUI.text = userName
         holder.bindingListItem.tvUserGithubUsernameUI.text = userUsername
         holder.bindingListItem.tvRepoUserGithubUI.text = userRepo
