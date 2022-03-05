@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.thenavigation.databinding.FragmentDetailCategoryBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,6 +64,10 @@ class DetailCategoryFragment : Fragment() {
 
         detailCtgrBinding.tvCategorynameFragUI.text = dataName
         detailCtgrBinding.tvCategorydescFragUI.text = "Stock left : $dataDesc"
+
+        detailCtgrBinding.btnGotoHomeFragUI.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_detailCategoryFragment_to_homeFragment)
+        )
 
 
     }
