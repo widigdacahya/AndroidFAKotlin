@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.thenavdrawer.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.thenavdrawer.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.thenavdrawer.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.thenavdrawer.CartFragment"
+        android:label="@string/menu_cart"
+        tools:layout="@layout/fragment_cart"/>
+
+    <activity
+        android:id="@+id/nav_subway"
+        android:name="com.example.thenavdrawer.SubwayActivity"
+        android:label="@string/menu_subway"
+        tools:layout="@layout/activity_subway"/>
+
+    <activity
+        android:id="@+id/nav_map"
+        android:name="com.example.thenavdrawer.MapsActivity"
+        android:label="@string/menu_map"
+        tools:layout="@layout/activity_maps"/>
+
+    <fragment
+        android:id="@+id/nav_baby"
+        android:name="com.example.thenavdrawer.BabyChangeFragment"
+        android:label="@string/menu_baby"
+        tools:layout="@layout/fragment_baby_change"/>
+</navigation>
