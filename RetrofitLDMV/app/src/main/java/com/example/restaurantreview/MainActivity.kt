@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.restaurantreview.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -53,6 +54,22 @@ class MainActivity : AppCompatActivity() {
 
         //[ LiveData View Model, so this findrestaurant will moved to View Model :D ]
         //findRestaurant()
+
+
+        //[single event]
+        mainViewModel.snackBarText.observe(this, {
+
+            //biar ndak tiap rotate muncul snackbar
+            it.getContentIfNotHandled()?.let { snackBarText ->
+                Snackbar.make(
+                    window.decorView.rootView,
+                    snackBarText,
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            }
+
+
+        })
 
 
         //[When button send]
