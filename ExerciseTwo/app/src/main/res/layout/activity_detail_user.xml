@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.detail.DetailUserActivity">
+
+    <ImageView
+        android:id="@+id/iv_profile_detailUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"
+        android:layout_marginTop="12dp"
+        android:layout_width="82dp"
+        android:layout_height="82dp"/>
+
+    <TextView
+        android:id="@+id/tv_name_detailUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_detailUI"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        tools:text="Cahyadesthian R. Widigda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_username_detailUI"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_detailUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"
+        tools:text="NotAAgoodThing"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_centerpotrait_detauilUI"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_textfollower_detailUI"
+        android:text="Follower"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_username_detailUI"
+        app:layout_constraintEnd_toStartOf="@id/gl_centerpotrait_detauilUI"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/ic_outline_people_24" />
+
+    <TextView
+        android:id="@+id/tv_followerdata_detailUI"
+        app:layout_constraintStart_toStartOf="@id/tv_textfollower_detailUI"
+        app:layout_constraintEnd_toEndOf="@id/tv_textfollower_detailUI"
+        app:layout_constraintTop_toBottomOf="@id/tv_textfollower_detailUI"
+        android:layout_marginTop="2dp"
+        tools:text="9999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_textfollowing_detaulUI"
+        app:layout_constraintStart_toEndOf="@id/gl_centerpotrait_detauilUI"
+        app:layout_constraintTop_toTopOf="@id/tv_textfollower_detailUI"
+        android:layout_marginStart="32dp"
+        android:text="Following"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/ic_baseline_directions_run_24" />
+
+    <TextView
+        android:id="@+id/tv_followingdata_detailUI"
+        app:layout_constraintStart_toStartOf="@id/tv_textfollowing_detaulUI"
+        app:layout_constraintEnd_toEndOf="@id/tv_textfollowing_detaulUI"
+        app:layout_constraintTop_toTopOf="@id/tv_followerdata_detailUI"
+        tools:text="9999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_detailUI"
+        android:background="@color/purple_200"
+        app:tabTextColor="@color/black"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_followerdata_detailUI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_detailUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tablayout_detailUI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
