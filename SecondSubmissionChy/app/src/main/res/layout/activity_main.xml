@@ -28,7 +28,6 @@
         android:autofillHints="cahya"
         android:background="@color/gray_500"
         android:hint="@string/looking_for_someone"
-        android:hintTextColor="#B0BEC5"
         android:inputType="text"
         android:paddingStart="20dp"
         android:layout_marginStart="4dp"
@@ -38,7 +37,7 @@
         app:layout_constraintEnd_toStartOf="@id/iv_personsearch_mainUI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/iv_personsearch_mainUI"
-        tools:ignore="RtlSymmetry,TextContrastCheck" />
+        />
 
     <ImageView
         android:id="@+id/iv_nothing_mainUI"
@@ -64,6 +63,7 @@
 
     <ProgressBar
         android:id="@+id/pb_mainUI"
+        android:visibility="gone"
         style="?android:attr/progressBarStyle"
         app:layout_constraintTop_toBottomOf="@id/et_usersearch_mainUI"
         app:layout_constraintBottom_toBottomOf="parent"
