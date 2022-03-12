@@ -4,15 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="12dp"
+    android:background="@color/black"
+    tools:context=".ui.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <ImageView
+        android:id="@+id/iv_personsearch_mainUI"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/gray_700"
+        android:contentDescription="@string/search_person_icon_to_click"
+        android:padding="12dp"
+        android:src="@drawable/ic_baseline_person_search_white_24"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/et_usersearch_mainUI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autofillHints="cahya"
+        android:background="@color/gray_500"
+        android:hint="@string/looking_for_someone"
+        android:hintTextColor="#B0BEC5"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray_400"
+        app:layout_constraintBottom_toBottomOf="@id/iv_personsearch_mainUI"
+        app:layout_constraintEnd_toStartOf="@id/iv_personsearch_mainUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_personsearch_mainUI"
+        tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/iv_nothing_mainUI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_usersearch_mainUI"
+        android:src="@drawable/undraw_pair_prog_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/image_show_nothing" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user_mainUI"
+        app:layout_constraintTop_toBottomOf="@id/et_usersearch_mainUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_user_github"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <ProgressBar
+        android:id="@+id/pb_mainUI"
+        style="?android:attr/progressBarStyle"
+        app:layout_constraintTop_toBottomOf="@id/et_usersearch_mainUI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

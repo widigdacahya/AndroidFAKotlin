@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_itemUI"
+    android:layout_gravity="center"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardBackgroundColor="@color/gray_900"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_github_photo_itemUI"
+            tools:src="@tools:sample/avatars"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/user_github_photo" />
+
+        <TextView
+            style="@style/WhiteBoldText"
+            android:id="@+id/tv_user_github_name_UI"
+            tools:text="nama user github"
+            card_view:layout_constraintTop_toTopOf="@id/iv_user_github_photo_itemUI"
+            card_view:layout_constraintStart_toEndOf="@id/iv_user_github_photo_itemUI"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_user_github_username_UI"
+            tools:text="username user github"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            card_view:layout_constraintStart_toStartOf="@id/tv_user_github_name_UI"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_user_github_name_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_center_item_UI"
+            card_view:layout_constraintGuide_percent="0.56"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_ic_repo_UI"
+            android:src="@drawable/ic_baseline_book_24"
+            card_view:layout_constraintStart_toStartOf="@id/tv_user_github_name_UI"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_user_github_username_UI"
+            android:layout_marginTop="12dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_repository" />
+
+        <TextView
+            android:id="@+id/tv_repo_user_github_UI"
+            tools:text="9999999"
+            android:textColor="@color/white"
+            card_view:layout_constraintStart_toEndOf="@id/iv_ic_repo_UI"
+            card_view:layout_constraintTop_toTopOf="@id/iv_ic_repo_UI"
+            card_view:layout_constraintBottom_toBottomOf="@id/iv_ic_repo_UI"
+            card_view:layout_constraintEnd_toEndOf="@id/gl_center_item_UI"
+            android:layout_marginStart="4dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:id="@+id/iv_ic_company_UI"
+            card_view:layout_constraintTop_toTopOf="@id/iv_ic_repo_UI"
+            card_view:layout_constraintStart_toEndOf="@id/gl_center_item_UI"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_apartment_24"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/icon_company" />
+
+        <TextView
+            android:id="@+id/tv_company_user_github_UI"
+            tools:text="Dicoding Indonesia"
+            android:textColor="@color/white"
+            card_view:layout_constraintStart_toEndOf="@id/iv_ic_company_UI"
+            card_view:layout_constraintTop_toTopOf="@id/iv_ic_company_UI"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="@id/iv_ic_company_UI"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="4dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
