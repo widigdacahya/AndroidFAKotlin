@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GithubUserChy</string>
+    <string name="looking_for_someone">Looking for someone?</string>
+    <string name="user_photo">user photo</string>
+    <string name="ic_location_detail_ui">ic location detail UI</string>
+    <string name="location">Location :</string>
+    <string name="dummy_location">somewhere on earth</string>
+    <string name="not_set">not set</string>
+    <string name="icon_work">icon work</string>
+    <string name="work_at">Work At :</string>
+    <string name="dummy_name">cahyadesthian rizki wididgda</string>
+    <string name="ic_following">ic following</string>
+    <string name="dummy_number">99999999999</string>
+    <string name="ic_follower">ic follower</string>
+    <string name="tab_text_1">Following</string>
+    <string name="tab_text_2">Follower</string>
+</resources>
