@@ -2,6 +2,7 @@ package com.cahyadesthian.githubuserchy.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -22,7 +23,7 @@ class DetailUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         detailUserBinding = ActivityDetailUserBinding.inflate(layoutInflater)
         setContentView(detailUserBinding.root)
-
+        loadingIndicator(true)
         val username = intent.getStringExtra(EXTRA_USERNAME)
         val bundle = Bundle()
         bundle.putString(EXTRA_USERNAME,username)
@@ -56,6 +57,7 @@ class DetailUserActivity : AppCompatActivity() {
 
                     tvFollowerdataDetailUI.text = it.followers.toString()
                     tvFollowingdataUI.text = it.following.toString()
+                    loadingIndicator(false)
                     supportActionBar?.title = it.login
                 }
             }
@@ -72,6 +74,10 @@ class DetailUserActivity : AppCompatActivity() {
         }.attach()
         supportActionBar?.elevation = 0f
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun loadingIndicator(isLoading: Boolean) {
+        if(isLoading) detailUserBinding.pbDetailuserDetailUI?.visibility = View.VISIBLE else detailUserBinding.pbDetailuserDetailUI?.visibility = View.INVISIBLE
     }
 
     companion object {

@@ -8,12 +8,23 @@
         android:layout_height="match_parent"
         tools:context=".ui.DetailUserActivity">
 
+        <ProgressBar
+            android:id="@+id/pb_detailuser_detailUI"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tablayout_detailUI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_photo_user_detailUI"
             tools:src="@tools:sample/avatars"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/placeholder_user"
             android:layout_marginTop="20dp"
             android:layout_marginStart="16dp"
             android:layout_width="120dp"
