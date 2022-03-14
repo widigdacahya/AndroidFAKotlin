@@ -39,6 +39,7 @@ class DetailUserActivity : AppCompatActivity() {
                     Glide.with(this@DetailUserActivity)
                         .load(it.avatar_url)
                         .centerCrop()
+                        .placeholder(R.drawable.placeholder_user)
                         .into(ivPhotoUserDetailUI)
 
                     tvUsernamedataDetailUI.text = it.login
@@ -55,6 +56,7 @@ class DetailUserActivity : AppCompatActivity() {
 
                     tvFollowerdataDetailUI.text = it.followers.toString()
                     tvFollowingdataUI.text = it.following.toString()
+                    supportActionBar?.title = it.login
                 }
             }
 
@@ -69,6 +71,7 @@ class DetailUserActivity : AppCompatActivity() {
             tab.text = resources.getString(TAB_TITLE[position])
         }.attach()
         supportActionBar?.elevation = 0f
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     companion object {

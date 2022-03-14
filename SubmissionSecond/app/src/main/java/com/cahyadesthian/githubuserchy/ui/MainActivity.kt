@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import androidx.activity.viewModels
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.cahyadesthian.githubuserchy.R
 import com.cahyadesthian.githubuserchy.databinding.ActivityMainBinding
 import com.cahyadesthian.githubuserchy.model.UserItemsResponse
 import com.cahyadesthian.githubuserchy.ui.adapter.UserGridRecyclerViewAdapter
+import com.cahyadesthian.githubuserchy.viewmodel.SplashViewModel
 import com.cahyadesthian.githubuserchy.viewmodel.UserItemViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -19,9 +23,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputUser : String
     private lateinit var userItemViewModel : UserItemViewModel
 
+    private val splashViewModel: SplashViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen().apply {
+            setKeepVisibleCondition{
+                splashViewModel.isLoading.value
+            }
+
+        }
+        setTheme(R.style.Theme_GithubUserChy)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 

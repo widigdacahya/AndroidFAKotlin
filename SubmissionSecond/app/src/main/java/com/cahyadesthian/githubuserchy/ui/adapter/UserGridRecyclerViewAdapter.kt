@@ -6,6 +6,7 @@ import android.view.animation.Animation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.cahyadesthian.githubuserchy.R
 import com.cahyadesthian.githubuserchy.databinding.ItemUserBinding
 import com.cahyadesthian.githubuserchy.model.UserItemsResponse
 
@@ -36,6 +37,7 @@ class UserGridRecyclerViewAdapter : RecyclerView.Adapter<UserGridRecyclerViewAda
                 Glide.with(itemView)
                     .load(userGithub.avatar_url)
                     .centerCrop()
+                    .placeholder(R.drawable.placeholder_user)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(ivUserItemUI)
 
