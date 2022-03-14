@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable-v24/tab_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/forsplash.xml" value="0.1" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_baseline_android_24.xml" value="0.1" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_baseline_work_outline_24.xml" value="0.22135416666666666" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_ney.xml" value="0.1" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_ney_logo.xml" value="0.22916666666666666" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_ney_secon.xml" value="0.1" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/ic_ocotcat.xml" value="0.2324074074074074" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/mybg_gradient.xml" value="0.1" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/splash_image.xml" value="0.2324074074074074" />
-        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/layout/activity_detail_user.xml" value="0.17" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/tab_indicator.xml" value="0.22552083333333334" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/drawable/tabbg.xml" value="0.22135416666666666" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/layout-land/activity_detail_user.xml" value="0.1" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/layout/activity_detail_user.xml" value="0.2" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/layout/fragment_follow.xml" value="0.18034447821681865" />
         <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/SubmissionSecond/app/src/main/res/layout/item_user.xml" value="0.2572463768115942" />

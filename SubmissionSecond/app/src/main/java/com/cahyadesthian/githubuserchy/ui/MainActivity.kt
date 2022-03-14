@@ -5,15 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import androidx.activity.viewModels
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.cahyadesthian.githubuserchy.R
 import com.cahyadesthian.githubuserchy.databinding.ActivityMainBinding
 import com.cahyadesthian.githubuserchy.model.UserItemsResponse
 import com.cahyadesthian.githubuserchy.ui.adapter.UserGridRecyclerViewAdapter
-import com.cahyadesthian.githubuserchy.viewmodel.SplashViewModel
 import com.cahyadesthian.githubuserchy.viewmodel.UserItemViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -23,16 +20,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputUser : String
     private lateinit var userItemViewModel : UserItemViewModel
 
-    private val splashViewModel: SplashViewModel by viewModels()
+    //private val splashViewModel: SplashViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        /*
         installSplashScreen().apply {
             setKeepVisibleCondition{
                 splashViewModel.isLoading.value
             }
 
-        }
+        }*/
         setTheme(R.style.Theme_GithubUserChy)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
@@ -51,10 +49,19 @@ class MainActivity : AppCompatActivity() {
 
         userItemViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(UserItemViewModel::class.java)
         userItemViewModel.getResultSearchedUser().observe(this, {
+
             if(it!=null) {
+                println("Woy apa ni " + it)
                 userItemAdapter.setList(it)
                 loadingIndicator(false)
+                showNone(false)
+                hidePicture()
             }
+
+            if(it.isEmpty()) {
+                showNone(true)
+            }
+
         })
 
 
@@ -81,6 +88,7 @@ class MainActivity : AppCompatActivity() {
         inputUser = mainBinding.etMainUI.text.toString()
         if(inputUser.isEmpty()) return
         loadingIndicator(true)
+        hidePicture()
         userItemViewModel.setSearchedUser(inputUser)
     }
 
@@ -88,6 +96,23 @@ class MainActivity : AppCompatActivity() {
         if(isLoading) mainBinding.pbMainUI.visibility = View.VISIBLE else mainBinding.pbMainUI.visibility = View.INVISIBLE
     }
 
+    private fun hidePicture() {
+        mainBinding.ivIllustrationMainUI.visibility = View.GONE
+    }
 
+    private fun showNone(isData: Boolean) {
+        if(isData) {
+            mainBinding.apply {
+                ivNotfoundMainUI.visibility = View.VISIBLE
+                tvNoneMainUI.visibility = View.VISIBLE
+            }
+        } else {
+            mainBinding.apply {
+                ivNotfoundMainUI.visibility = View.INVISIBLE
+                tvNoneMainUI.visibility = View.INVISIBLE
+        }
 
+    }
+
+}
 }
