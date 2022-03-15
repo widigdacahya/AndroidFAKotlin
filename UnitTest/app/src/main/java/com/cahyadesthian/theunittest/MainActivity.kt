@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
 
-        val length = activityMainBinding.edtLength.toString().trim()
-        val width = activityMainBinding.edtWidth.toString().trim()
-        val height = activityMainBinding.edtHeight.toString().trim()
+        val length = activityMainBinding.edtLength.text.toString().trim()
+        val width = activityMainBinding.edtWidth.text.toString().trim()
+        val height = activityMainBinding.edtHeight.text.toString().trim()
 
         when {
             TextUtils.isEmpty(length) -> activityMainBinding.edtLength.error = "This Field Length Can't be empty"
