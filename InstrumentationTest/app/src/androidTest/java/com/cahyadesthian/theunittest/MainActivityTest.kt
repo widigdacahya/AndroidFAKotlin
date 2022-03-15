@@ -27,6 +27,7 @@ class MainActivityTest {
     private val fieldEmptytHeight = "This Field Height Can't be empty"
 
 
+    //untuk tell which activity to execute
     @Before
     fun setup() {
         ActivityScenario.launch(MainActivity::class.java)
