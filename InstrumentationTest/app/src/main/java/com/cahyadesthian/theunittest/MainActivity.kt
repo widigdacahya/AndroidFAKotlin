@@ -31,10 +31,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val height = activityMainBinding.edtHeight.text.toString().trim()
 
         when {
+
             TextUtils.isEmpty(length) -> activityMainBinding.edtLength.error = "This Field Length Can't be empty"
             TextUtils.isEmpty(width) -> activityMainBinding.edtWidth.error = "This Field Width Can't be empty"
             TextUtils.isEmpty(height) -> activityMainBinding.edtHeight.error = "This Field Height Can't be empty"
             else -> {
+
                 val valLength = length.toDouble()
                 val valWidth = width.toDouble()
                 val valHeight = height.toDouble()
