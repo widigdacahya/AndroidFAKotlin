@@ -15,5 +15,6 @@
     <string name="dummy_number">085712344321</string>
     <string name="dummy_age">16</string>
     <string name="dummy_is_love">IsLoveHer</string>
+    <string name="update">UPDATE</string>
 
 </resources>

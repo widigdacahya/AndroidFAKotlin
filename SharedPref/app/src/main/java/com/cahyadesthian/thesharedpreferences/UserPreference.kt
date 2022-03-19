@@ -2,10 +2,34 @@ package com.cahyadesthian.thesharedpreferences
 
 import android.content.Context
 
+
+/**
+ * Kelas untuk manipulasi objek
+ * SHARED PREFERENCES
+ * baik berupa penambahan data atau mengubah data
+ *
+ * */
+
 internal class UserPreference(context: Context){
 
+    //ada SharedPreference yang diciptakan dari activity atau kelas lain.
+    //Hanya diciptakan sekali
     private val preference = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
+    /*
+    * Ketika Anda membuat obyek dari kelas UserPreference pada Activity berikutnya,
+    * maka obyek Shared Preferences akan diciptakan dan hanya diciptakan sekali.
+    * Jika sudah ada, obyek yang sudah ada yang akan dikembalikan.
+    * Semua itu Anda lakukan di konstruktor kelas UserPreference.
+    * */
+
+
+
+    /*
+    * Di sini juga terdapat 2 metode yaitu setUser dan getUser.
+    *Untuk menyimpan data kita harus mengakses obyek editor yang dimiliki oleh preferences.
+    *
+    * */
     fun setUser(value: UserModel) {
         val editor = preference.edit()
         editor.putString(NAME, value.name)
@@ -14,6 +38,14 @@ internal class UserPreference(context: Context){
         editor.putString(PHONE_NUMBER, value.phoneNumber)
         editor.putBoolean(LOVE_HER, value.isLove)
         editor.apply()
+        /*
+        * editor.apply(), di sinilah data akan disimpan ke dalam preferences.
+        * Selain apply() ada metode lainnya yaitu commit().
+        * Perbedaan dari Apply dan Commit adalah pada mekanismenya.
+        * Apply dijalankan secara asynchronous, sedangkan Commit secara synchronous.
+        * Perhatikan betapa mudahnya proses menyimpan dan membaca data.
+        * Kita hanya menggunakan class model lalu metode getter dan setter saja.
+        * */
     }
 
     fun getUser(): UserModel {
