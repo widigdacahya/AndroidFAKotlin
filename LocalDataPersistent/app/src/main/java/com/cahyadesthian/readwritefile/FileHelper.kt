@@ -5,15 +5,21 @@ import android.content.Context
 
 //untuk tempat medtode menyimpan dan membaca data
 
+internal object FileHelper {
 
-    internal object FileHelper {
-
+    /*
+    metode openFileOutput berasal dari FileOutputStream
+    *
+    * */
         fun writeToFile(fileModel: FileModel, context: Context) {
             context.openFileOutput(fileModel.filename, Context.MODE_PRIVATE).use {
                 it.write(fileModel.data?.toByteArray())
             }
         }
 
+    /*
+    * metode openFileInput ini ada dari FileInputStream
+    * */
         fun readFromFile(context: Context, fileName: String) : FileModel {
             val fileModel = FileModel()
             fileModel.filename = fileName
@@ -25,5 +31,5 @@ import android.content.Context
             return fileModel
         }
 
-    }
+}
 
