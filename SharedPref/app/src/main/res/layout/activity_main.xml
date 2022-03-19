@@ -4,15 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/tv_name_mainUI"
+        android:text="@string/name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_namedata_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/dummy_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_mainUI"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tv_email_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_namedata_mainUI"
+        android:text="@string/email"
+        android:layout_marginTop="12dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_emaildata_mainUI"
+        app:layout_constraintTop_toBottomOf="@id/tv_email_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/dummy_email"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tv_handphone_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_emaildata_mainUI"
+        android:layout_marginTop="12dp"
+        android:text="@string/phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_handphonedata_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_handphone_mainUI"
+        android:text="@string/dummy_number"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tv_age_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_handphonedata_mainUI"
+        android:layout_marginTop="12dp"
+        android:text="@string/age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_agedata_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_age_mainUI"
+        android:text="@string/dummy_age"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tv_loveher_mainUI"
+        app:layout_constraintStart_toStartOf="@id/tv_name_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_agedata_mainUI"
+        android:layout_marginTop="12dp"
+        android:text="@string/love_her"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_loveherdata_mainUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_loveher_mainUI"
+        android:text="@string/dummy_is_love"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btn_save_mainUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_loveherdata_mainUI"
+        android:layout_marginTop="16dp"
+        android:text="@string/save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

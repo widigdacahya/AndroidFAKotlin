@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">TheSharedPreferences</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">No. Handphone</string>
+    <string name="age">Age</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="save">Save</string>
+    <string name="love_her">Love her?</string>
+    <string name="change">Change</string>
+    <string name="dummy_name">Cahyadesthian R. Widigda</string>
+    <string name="dummy_email">cahya@email.com</string>
+    <string name="dummy_number">085712344321</string>
+    <string name="dummy_age">16</string>
+    <string name="dummy_is_love">IsLoveHer</string>
+
 </resources>
