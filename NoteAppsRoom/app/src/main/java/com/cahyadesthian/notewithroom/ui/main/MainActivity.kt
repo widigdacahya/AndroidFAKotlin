@@ -1,7 +1,8 @@
-package com.cahyadesthian.notewithroom
+package com.cahyadesthian.notewithroom.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cahyadesthian.notewithroom.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
