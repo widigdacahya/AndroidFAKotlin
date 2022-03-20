@@ -9,6 +9,8 @@ import androidx.room.*
  * Kelas ini nantinya digunakan untuk melakukan eksekusi quiring
  *
  * */
+
+@Dao
 interface NoteDao {
 
     @Insert(onConflict =  OnConflictStrategy.IGNORE)
