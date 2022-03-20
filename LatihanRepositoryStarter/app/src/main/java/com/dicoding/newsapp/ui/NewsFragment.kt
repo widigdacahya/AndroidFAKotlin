@@ -40,7 +40,26 @@ class NewsFragment : Fragment() {
         }
         //6_1
 
-        val newsAdapter = NewsAdapter()
+
+
+        /**
+         * STEP 10
+         * kode untuk membaca data bookmark dan melakukan aksi
+         * ketika ikon bookmark ditekan pada NewsFragment
+         * */
+        //10_1
+        val newsAdapter = NewsAdapter{news ->
+            if(news.isBookmarked) {
+                viewModel.deleteNews(news)
+            } else {
+                viewModel.saveNews(news)
+            }
+        }
+        //10_1
+
+
+
+
 
         //6_2
 
@@ -69,7 +88,12 @@ class NewsFragment : Fragment() {
                 }
 
             })
-        }
+        } else if (tabName == TAB_BOOKMARK) { //10_2
+            viewModel.getBookmarkedNews().observe(viewLifecycleOwner, {bookmarkedNews ->
+                binding?.progressBar?.visibility = View.GONE
+                newsAdapter.submitList(bookmarkedNews)
+            })
+        } //10_2
 
         //6_2
 

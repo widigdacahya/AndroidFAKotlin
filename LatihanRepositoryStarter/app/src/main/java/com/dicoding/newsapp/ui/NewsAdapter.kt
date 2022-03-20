@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +17,16 @@ import com.dicoding.newsapp.databinding.ItemNewsBinding
 import com.dicoding.newsapp.ui.NewsAdapter.MyViewHolder
 import com.dicoding.newsapp.utils.DateFormatter
 
-class NewsAdapter : ListAdapter<NewsEntity, MyViewHolder>(DIFF_CALLBACK) {
+/**
+ * Step 9
+ *tambahkan kode pada NewsAdapter untuk menampilkan state
+ * bookmark dan aksi
+ * ketika bookmark ditekan pada fungsi onBindViewHolder
+ * */
+
+
+
+class NewsAdapter(private val onBookmarkClick: (NewsEntity) -> Unit) : ListAdapter<NewsEntity, MyViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = ItemNewsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,6 +36,18 @@ class NewsAdapter : ListAdapter<NewsEntity, MyViewHolder>(DIFF_CALLBACK) {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val news = getItem(position)
         holder.bind(news)
+
+        //9_1
+        val ivBookmark = holder.binding.ivBookmarkItemUI
+        if(news.isBookmarked) {
+            ivBookmark.setImageDrawable(ContextCompat.getDrawable(ivBookmark.context,R.drawable.ic_bookmarked_white))
+        } else {
+            ivBookmark.setImageDrawable(ContextCompat.getDrawable(ivBookmark.context, R.drawable.ic_bookmark_white))
+        }
+        ivBookmark.setOnClickListener {
+            onBookmarkClick(news)
+        }
+
     }
 
     class MyViewHolder(val binding: ItemNewsBinding) : RecyclerView.ViewHolder(

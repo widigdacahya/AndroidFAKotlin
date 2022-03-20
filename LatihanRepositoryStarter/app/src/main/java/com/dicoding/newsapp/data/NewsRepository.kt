@@ -67,6 +67,28 @@ class NewsRepository private constructor(
     }
 
 
+    /**
+     * STEP 7
+     * membuat bookmark
+     * */
+    //7_1
+    fun getBookmarkedNews(): LiveData<List<NewsEntity>> {
+        return newsDao.getBookmarkedNews()
+    }
+    //7_1
+
+
+    //7_2
+
+    fun setBookmarkedNews(news: NewsEntity, bookmarkState: Boolean) {
+        appExecutors.diskIO.execute {
+            news.isBookmarked = bookmarkState
+            newsDao.updateNews(news)
+        }
+    }
+
+    //7_2
+
 
     companion object {
         @Volatile
@@ -83,3 +105,23 @@ class NewsRepository private constructor(
 
 
 }
+
+/***
+ * Pada fungsi ini, terdapat beberapa langkah untuk membuat offline support, antara lain:
+ * 1 Inisiasi dengan status Loading.
+ * 2 Mengambil dari dari network dengan ApiService.
+ * 3 Membaca data ketika response berhasil.
+ * 4 Mengecek apakah data yang ada sudah ada di dalam bookmark atau belum.
+ * 5 Mengubah data response menjadi entity sebelum dimasukkan ke dalam database.
+ * 6 Menghapus semua data dari database yang tidak ditandai bookmark.
+ * 7 Memasukkan data baru dari internet ke dalam database.
+ * 8 Memberi status jika terjadi eror.
+ * 9 Mengambil data dari database yang merupakan sumber utama untuk dikonsumsi dan memberi tanda sukses.
+ * Dengan skema di atas, maka semua data yang didapat dari network disimpan
+ * ke dalam database. Sehingga, ketika tidak ada koneksi internet,
+ * aplikasi tetap dapat menampilkan data yang sudah disimpan dari database.
+ * Inilah fungsi Repository yang digunakan untuk mengatur dari berbagai sumber data.
+ *
+ *
+ *
+ * */
