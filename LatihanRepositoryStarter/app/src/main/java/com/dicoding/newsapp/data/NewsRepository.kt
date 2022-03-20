@@ -1,7 +1,10 @@
 package com.dicoding.newsapp.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.liveData
+import androidx.lifecycle.map
 import com.dicoding.newsapp.BuildConfig
 
 import com.dicoding.newsapp.data.local.entity.NewsEntity
@@ -27,8 +30,37 @@ class NewsRepository private constructor(
 
     private val result = MediatorLiveData<Result<List<NewsEntity>>>()
 
-    fun getHeadlineNews(): LiveData<Result<List<NewsEntity>>> {
-        result.value = Result.Loading
+    /**
+     * STEP 3 ada perubahan dikarekanakn penerapan coroutine
+     * */
+    //fun getHeadlineNews(): LiveData<Result<List<NewsEntity>>> {
+    fun getHeadlineNews(): LiveData<Result<List<NewsEntity>>> = liveData {
+        //result.value = Result.Loading
+        emit(Result.Loading)
+        try {
+            val response = apiService.getNews(BuildConfig.API_KEY)
+            val articles = response.articles
+            val newsList = articles.map { article ->
+                val isBookmarked = newsDao.isNewsBookmarked(article.title)
+                NewsEntity(
+                    article.title,
+                    article.publishedAt,
+                    article.urlToImage,
+                    article.url,
+                    isBookmarked
+                )
+            }
+            newsDao.deleteAll()
+            newsDao.insertNews(newsList)
+        } catch (e: Exception) {
+            Log.d("NewsRepository", "getHeadlineNews: ${e.message.toString()}")
+            emit(Result.Error(e.message.toString()))
+        }
+
+        val localData: LiveData<Result<List<NewsEntity>>> = newsDao.getNews().map { Result.Success(it) }
+        emitSource(localData)
+
+        /*
         val client = apiService.getNews(BuildConfig.API_KEY)
         client.enqueue(object : Callback<NewsResponse> {
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
@@ -59,12 +91,18 @@ class NewsRepository private constructor(
 
         })
 
+        */
+
+        /*
         val localData = newsDao.getNews()
         result.addSource(localData) { newData: List<NewsEntity> ->
             result.value = Result.Success(newData)
         }
         return result
+        */
+
     }
+
 
 
     /**
@@ -80,14 +118,24 @@ class NewsRepository private constructor(
 
     //7_2
 
+    /*
     fun setBookmarkedNews(news: NewsEntity, bookmarkState: Boolean) {
         appExecutors.diskIO.execute {
             news.isBookmarked = bookmarkState
             newsDao.updateNews(news)
         }
-    }
+    }*/
 
     //7_2
+
+
+    /**
+     * Penerapan Coroutine pada setBookmarkedNews
+     * **/
+    suspend fun setNewsBookmark(news:NewsEntity, bookmarkState: Boolean) {
+        news.isBookmarked = bookmarkState
+        newsDao.updateNews(news)
+    }
 
 
     companion object {
