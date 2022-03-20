@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TheNotes</string>
+
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Hapus</string>
+    <string name="date">Date</string>
+    <string name="button_action_to_add_note">button action to add note</string>
 </resources>
