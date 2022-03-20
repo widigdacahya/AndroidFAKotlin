@@ -33,6 +33,12 @@ abstract class NoteRoomDatabase : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
                     NoteRoomDatabase::class.java, "note_database")
                         .build()
+                    /**
+                     * Kode di atas digunakan untuk membuat atau membangun database pada
+                     * aplikasi dengan nama note_database. Dengan begitu, Anda bisa memanfaatkannya
+                     * untuk digunakan di kelas lain,
+                     * pada project ini Anda memakainya di kelas NoteRepository.
+                     * */
                 }
             }
             return INSTANCE as NoteRoomDatabase
@@ -46,3 +52,9 @@ abstract class NoteRoomDatabase : RoomDatabase() {
     * */
 
 }
+
+/**
+ * Dengan memberikan annotation @Database dan memberikan turunan kelas dari RoomDatabase
+ * maka sebuah kelas abstract tersebut sudah dikatakan sebagai RoomDatabase.
+ *
+ * */

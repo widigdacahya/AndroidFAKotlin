@@ -33,6 +33,7 @@ data class Note (
  * Default dari nama tabel adalah sesuai dengan nama kelas tersebut.
  * Kemudian variabel yang di dalamnya akan menjadi column dari tabel Note
  *
+ *
  *Kode @ColumnInfo digunakan untuk memberi nama column dari tabel. Jika tidak diberi nama,
  * maka default dari nama column adalah variable tersebut.
  *
