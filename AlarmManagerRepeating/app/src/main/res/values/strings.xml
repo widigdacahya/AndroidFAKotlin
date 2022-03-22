@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OneTime AlarmManager</string>
+    <string name="app_name">RepeatTime AlarmManager</string>
 
     <string name="one_time_alarm">One Time Alarm</string>
     <string name="alarm_date">Tanggal Alarm</string>
@@ -11,4 +11,5 @@
     <string name="alarm_time">Waktu Alarm</string>
     <string name="image_button_date">image button date</string>
     <string name="image_button_time">image button time</string>
+    <string name="btn_repeating_time">btn repeating time</string>
 </resources>

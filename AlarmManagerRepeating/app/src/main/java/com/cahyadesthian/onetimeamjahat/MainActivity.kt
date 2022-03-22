@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DatePickerFragme
         mainBinding?.btnSetOnceAlarm?.setOnClickListener(this)
 
         alarmReceiver = AlarmReceiver()
+
+        //untuk repaating alarm
+        mainBinding?.btnRepeatingTime?.setOnClickListener(this)
+        mainBinding?.btnSetRepeatingAlarm?.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View) {
@@ -53,6 +58,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DatePickerFragme
 
                 alarmReceiver.setOneTimeAlarm(this,AlarmReceiver.TYPE_ONE_TIME,onceDate,onceTime,onceMessage)
             }
+
+            R.id.btn_repeating_time -> {
+                val timePickerFrgament = TimePickerFrgament()
+                timePickerFrgament.show(supportFragmentManager, TIME_PICKER_REPEAT_TAG)
+            }
+
+            R.id.btn_set_repeating_alarm -> {
+                val repeatTime = mainBinding?.tvRepeatingTime?.text.toString()
+                val repeatMessage = mainBinding?.edtRepeatingMessage?.text.toString()
+                alarmReceiver.setRepeatingAlarm(this, AlarmReceiver.TYPE_REPEATING, repeatTime, repeatMessage)
+            }
+
         }
     }
 
@@ -79,7 +96,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DatePickerFragme
         // Set text dari textview berdasarkan tag
         when (tag) {
             TIME_PICKER_ONCE_TAG -> mainBinding?.tvOnceTime?.text = dateFormat.format(calendar.time)
-            TIME_PICKER_REPEAT_TAG -> {}
+            TIME_PICKER_REPEAT_TAG -> {mainBinding?.tvRepeatingTime?.text = dateFormat.format(calendar.time)}
             else -> {
             }
         }
