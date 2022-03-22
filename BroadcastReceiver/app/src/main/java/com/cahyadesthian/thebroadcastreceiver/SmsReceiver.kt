@@ -35,7 +35,7 @@ class SmsReceiver : BroadcastReceiver() {
                 Bundle dengan key "pdus" sudah merupakan standar yang digunakan oleh system
             */
             if(bundle != null) {
-                val pdusObj = bundle.get("pdus") as Array<Any>
+                val pdusObj = bundle.get("pdus") as Array<*>
                 for(aPdusObj in pdusObj) {
                     val currentMessage = getIncominMessage(aPdusObj as Any, bundle)
                     val senderNum = currentMessage.displayOriginatingAddress

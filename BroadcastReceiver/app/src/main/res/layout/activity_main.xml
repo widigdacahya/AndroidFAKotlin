@@ -26,4 +26,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/btn_download"
+        android:text="@string/download_file"
+        app:layout_constraintTop_toBottomOf="@id/btn_permission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
