@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TheSimpleNotification</string>
+    <string name="app_name">Notif Pending Intent</string>
 
     <string name="content_title">Content title</string>
     <string name="content_text">Content text</string>
