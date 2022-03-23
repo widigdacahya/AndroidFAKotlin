@@ -39,12 +39,41 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hal_vert_lain_mainUI"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_run_periodic_task_mainUI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/hal_vert_lain_mainUI"
+        android:layout_marginEnd="8dp"
+        android:text="@string/run_periodic_task"
+        app:layout_constraintTop_toBottomOf="@id/btn_onetimetask_mainUI"
+        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_cancel_periodic_task_mainUI"
+        app:layout_constraintStart_toEndOf="@id/hal_vert_lain_mainUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_onetimetask_mainUI"
+        android:layout_marginTop="4dp"
+        android:text="@string/cancel_periodic_task"
+        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/tv_textStatus_mainUI"
         android:text="@string/status"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_onetimetask_mainUI"
+        app:layout_constraintTop_toBottomOf="@id/btn_cancel_periodic_task_mainUI"
         android:layout_marginTop="8dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
