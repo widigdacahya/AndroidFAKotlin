@@ -7,7 +7,7 @@ interface ToDoAPI {
 
     //place where we can put function to our API
 
-    @GET("todo")
+    @GET("/todos")
     suspend fun getListTodo(): Response<List<ToDo>>
 
 
