@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ApiToDo</string>
+    <string name="user_id">User Id : </string>
 </resources>
