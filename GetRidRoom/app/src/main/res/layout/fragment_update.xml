@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btn_add_frag_updt"
+        android:id="@+id/btn_update_frag_updt"
         app:layout_constraintStart_toStartOf="@id/edt_age_frag_updt"
         app:layout_constraintEnd_toEndOf="@id/edt_age_frag_updt"
         app:layout_constraintTop_toBottomOf="@id/edt_age_frag_updt"

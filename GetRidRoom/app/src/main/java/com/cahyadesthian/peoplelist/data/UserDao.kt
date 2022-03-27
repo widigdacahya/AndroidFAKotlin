@@ -1,10 +1,7 @@
 package com.cahyadesthian.peoplelist.data
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.cahyadesthian.peoplelist.model.User
 
 @Dao
@@ -16,7 +13,8 @@ interface UserDao {
     @Query("SELECT * FROM USER_TABLE ORDER BY ID ASC")
     fun readAllData(): LiveData<List<User>>
 
-
+    @Update
+    suspend fun updateUser(user:User)
 
 
 
