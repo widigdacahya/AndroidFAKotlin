@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GetRidViewModel</string>
+    <string name="increment">INCREMENT</string>
 </resources>
