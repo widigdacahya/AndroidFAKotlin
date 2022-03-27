@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.cahyadesthian.peoplelist.R
 import com.cahyadesthian.peoplelist.data.UserViewModel
 import com.cahyadesthian.peoplelist.databinding.FragmentListBinding
@@ -29,7 +32,17 @@ class ListFragment : Fragment() {
 
 
         //RecyclerView
-        
+        val listAdapter = ListAdapter()
+        listBinding.apply {
+            rvListuserFragList.adapter = listAdapter
+            rvListuserFragList.layoutManager = LinearLayoutManager(requireContext())
+        }
+
+        //UserViewModel
+        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java )
+        mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
+            listAdapter.setData(user)
+        })
 
         return listBinding.root
     }
