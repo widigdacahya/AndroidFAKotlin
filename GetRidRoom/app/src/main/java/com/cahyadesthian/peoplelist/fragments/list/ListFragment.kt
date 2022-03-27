@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cahyadesthian.peoplelist.R
-import com.cahyadesthian.peoplelist.data.UserViewModel
+import com.cahyadesthian.peoplelist.viewmodel.UserViewModel
 import com.cahyadesthian.peoplelist.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {

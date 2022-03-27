@@ -1,6 +1,8 @@
-package com.cahyadesthian.peoplelist.data
+package com.cahyadesthian.peoplelist.repository
 
 import androidx.lifecycle.LiveData
+import com.cahyadesthian.peoplelist.data.UserDao
+import com.cahyadesthian.peoplelist.model.User
 
 class UserRepository(private val userDao: UserDao){
 

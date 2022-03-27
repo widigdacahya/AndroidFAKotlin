@@ -1,9 +1,12 @@
-package com.cahyadesthian.peoplelist.data
+package com.cahyadesthian.peoplelist.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.cahyadesthian.peoplelist.data.UserDatabase
+import com.cahyadesthian.peoplelist.repository.UserRepository
+import com.cahyadesthian.peoplelist.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

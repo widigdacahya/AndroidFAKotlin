@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.cahyadesthian.peoplelist.R
-import com.cahyadesthian.peoplelist.data.User
-import com.cahyadesthian.peoplelist.data.UserViewModel
+import com.cahyadesthian.peoplelist.model.User
+import com.cahyadesthian.peoplelist.viewmodel.UserViewModel
 import com.cahyadesthian.peoplelist.databinding.FragmentAddBinding
 
 

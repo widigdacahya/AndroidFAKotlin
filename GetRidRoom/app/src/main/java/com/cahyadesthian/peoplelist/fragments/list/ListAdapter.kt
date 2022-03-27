@@ -1,11 +1,11 @@
 package com.cahyadesthian.peoplelist.fragments.list
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.cahyadesthian.peoplelist.data.User
-import com.cahyadesthian.peoplelist.databinding.FragmentListBinding
+import com.cahyadesthian.peoplelist.R
+import com.cahyadesthian.peoplelist.model.User
 import com.cahyadesthian.peoplelist.databinding.UserRowBinding
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -28,6 +28,10 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             tvFirstNameData.text = currentItem.firstName
             tvLastNameData.text = currentItem.lastName
             tvAgeData.text = currentItem.age.toString()
+            cvUserItem.setOnClickListener {
+                val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+                Navigation.findNavController(it).navigate(action)
+            }
         }
 
 
