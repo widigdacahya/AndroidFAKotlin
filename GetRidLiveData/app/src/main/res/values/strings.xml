@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Soldier\'s Minute</string>
+    <string name="milliseconds">Milliseconds</string>
 </resources>

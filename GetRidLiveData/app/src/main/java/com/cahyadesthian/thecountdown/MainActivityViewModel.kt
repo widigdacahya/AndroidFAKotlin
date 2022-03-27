@@ -16,8 +16,11 @@ class MainActivityViewModel : ViewModel() {
     private var _finished = MutableLiveData<Boolean>()
     var finished :LiveData<Boolean> = _finished
 
+    var timerInputValue = MutableLiveData<Long>()
+
+
     fun startTimer() {
-        timer = object: CountDownTimer(60000,1000) {
+        timer = object: CountDownTimer(timerInputValue.value?.toLong()!!,1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val timeLeft = millisUntilFinished/1000
                 _seconds.value = timeLeft.toInt()
@@ -34,5 +37,6 @@ class MainActivityViewModel : ViewModel() {
     fun stopStimer() {
         timer.cancel()
     }
+
 
 }
