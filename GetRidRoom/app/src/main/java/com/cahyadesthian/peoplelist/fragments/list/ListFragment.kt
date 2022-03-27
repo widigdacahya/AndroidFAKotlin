@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.cahyadesthian.peoplelist.R
+import com.cahyadesthian.peoplelist.data.UserViewModel
 import com.cahyadesthian.peoplelist.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
 
     private lateinit var listBinding: FragmentListBinding
+    private lateinit var mUserViewModel: UserViewModel
 
 
     override fun onCreateView(
@@ -24,6 +26,10 @@ class ListFragment : Fragment() {
         listBinding.fabAdddFragList.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
+
+
+        //RecyclerView
+        
 
         return listBinding.root
     }
