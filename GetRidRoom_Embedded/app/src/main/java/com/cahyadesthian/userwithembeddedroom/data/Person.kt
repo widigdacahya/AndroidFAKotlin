@@ -10,12 +10,10 @@ data class Person(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val firstName: String,
-    val middleName: String,
     val lastName: String,
     val age: Int,
     @Embedded
     val adress:Address
-
 )
 
 
