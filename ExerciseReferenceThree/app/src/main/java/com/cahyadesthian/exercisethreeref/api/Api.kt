@@ -7,6 +7,7 @@ import com.cahyadesthian.exercisethreeref.data.model.SearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
+import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface Api {
@@ -15,7 +16,7 @@ interface Api {
         get() = BuildConfig.API_KEY_EXERCISE_THREE_REFERENCE
 
     @GET("search/users")
-    //@Header("Authorization: token ${this.magicString}")
+    @Headers("Authorization: token " + BuildConfig.API_KEY_EXERCISE_THREE_REFERENCE)
     fun getSearchUsers(
         @Query("q") query: String
     ):Call<SearchResponse>
