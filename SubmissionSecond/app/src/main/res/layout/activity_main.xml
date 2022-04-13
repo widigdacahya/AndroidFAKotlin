@@ -9,6 +9,7 @@
     android:layout_gravity="center_horizontal"
     tools:context=".ui.MainActivity">
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_et_mainUI"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
