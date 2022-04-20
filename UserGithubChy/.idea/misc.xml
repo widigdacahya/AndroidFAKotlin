@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/GithubUserChy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2105" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA/GithubUserChy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2105" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/drawable/favourite_toggle.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/layout/activity_detail_user.xml" value="0.35260416666666666" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/layout/activity_favourite.xml" value="0.35260416666666666" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/layout/fragment_follow.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/layout/item_row.xml" value="0.18034447821681865" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/BFAA_Private/app/src/main/res/menu/option_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/bg_switch_btn.xml" value="0.1" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/bg_switch_btn_dark.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/favourite_ic_toggle.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/favourite_ic_toggle_dark.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/favourite_toggle.xml" value="0.12962962962962962" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/forsplash.xml" value="0.221875" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_follow_the_signs_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_location_white_on_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_people_24.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_wb_sunny_24.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fac_gray.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fac_pink.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fav_active_dark.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fav_active_light.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fav_not_active_dark.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fav_not_active_ligth.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fav_pink.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_fav_white.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_ocotcat.xml" value="0.221875" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_round_people_white_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_round_work_white_24.xml" value="0.21927083333333333" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_undraw_lighthouse_forlight.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_undraw_moonlight_fordark.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/ic_undraw_not_found_one.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/mybg_gradient.xml" value="0.221875" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/tab_indicator.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/tab_indicator_night.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/tabbg.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/drawable/tabbg_night.xml" value="0.3828125" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-land-night/activity_detail_user.xml" value="0.2651006711409396" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-land-night/activity_setting.xml" value="0.31040564373897706" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-land/activity_detail_user.xml" value="0.33" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-land/activity_setting.xml" value="0.31040564373897706" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-night/activity_detail_user.xml" value="0.5" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-night/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-night/activity_setting.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-night/item_grid.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout-night/item_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/activity_detail_user.xml" value="0.33" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/activity_favourite.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/activity_setting.xml" value="0.25" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/fragment_follow.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/item_grid.xml" value="0.22" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/layout/item_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/menu/delete_menu.xml" value="0.2462962962962963" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/menu/option_menu.xml" value="0.17685185185185184" />
+        <entry key="..\:/kuliah/BANGKIT2022/Learn/Sub3_sekian/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21927083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

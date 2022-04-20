@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basecolor"
+    android:padding="16dp"
+    tools:context=".ui.activity.SettingActivity">
+
+    <ImageView
+        android:id="@+id/iv_illustrate_settingUI"
+        android:src="@drawable/ic_undraw_lighthouse_forlight"
+        app:layout_constraintBottom_toTopOf="@id/switch_btn_change_settingUI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="12dp"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/illustration_for_dark_mode" />
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_btn_change_settingUI"
+        android:text="@string/dark_mode"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/tv_quote_setting"
+        android:text="@string/quote_for_ligth"
+        android:textStyle="italic"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_btn_change_settingUI"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_quotewriter_setting"
+        android:text="@string/francis_of_assisi"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_quote_setting"
+        app:layout_constraintEnd_toEndOf="@id/tv_quote_setting"
+        app:layout_constraintStart_toStartOf="@id/tv_quote_setting"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/secret_gif_settingnightpotrait"
+        android:src="@drawable/cat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="60dp"/>
+
+    <TextView
+        android:id="@+id/tv_secret_message_settingnightpotrait"
+        android:text="@string/msg_special"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/secret_gif_settingnightpotrait"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">UserGithub</string>
+    <string name="looking_for_someone">Looking for someone?</string>
+    <string name="tab_text_1">Follower</string>
+    <string name="tab_text_2">Following</string>
+    <string name="enable_dark_mode">enable dark mode</string>
+    <string name="photo_of_user">photo of user</string>
+    <string name="user_id">user id:</string>
+    <string name="favourite">Favourite</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="delete_all_fav_user">Delete All Fav User</string>
+    <string name="quote_for_dark">Dark was only for your phone, Not for your soul. 🌿 </string>
+    <string name="quote_for_ligth">Where there is Darknes, let there be light.☀ </string>
+    <string name="shreya_shulka">Shreya Shulka</string>
+    <string name="illustration_for_dark_mode">illustration for dark mode</string>
+    <string name="francis_of_assisi">Francis of Assisi</string>
+    <string name="favourite_this_user">Favourite\nthis User</string>
+    <string name="ic_workplace">ic workplace</string>
+    <string name="work">work :</string>
+    <string name="not_set">Not Set</string>
+    <string name="location">Location :</string>
+    <string name="ic_following">ic following</string>
+    <string name="ic_follower">ic follower</string>
+    <string name="followers">Followers :</string>
+    <string name="following">Following :</string>
+    <string name="seacrh_illustration">Seacrh Illustration</string>
+    <string name="illustation_not_found">illustation not found</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="msg_special">pssst😉...thank you for using dark mode \npicture above only appear in this setting because I love this setting(potrait-night)</string>
+</resources>
